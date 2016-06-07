@@ -1,5 +1,6 @@
 .site-header {
-  background: #FFEAAA;
+  background: #C1CAD6;
+  color: #6C6EA0;
 }
 
 /* DONE: Float the main header to the left, to make room for the hamburger menu. */
@@ -52,6 +53,13 @@
 .byline a {
   font-weight: bold;
   text-decoration: none;
+}
+
+img {
+  margin: 30px;
+  max-width: 600px;
+  border: 2px solid #FFFFFF;
+  max-width: 200px;
 }
 
 @media only screen and (min-width: 960px) {

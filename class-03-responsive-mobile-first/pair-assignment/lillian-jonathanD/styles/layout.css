@@ -28,6 +28,11 @@
     float: none;
   }
 
+  .filterStyle {
+    justify-content: center;
+    display: flex;
+  }
+
   #filters select {
     width: 15em;
     margin: .2em .2em;
