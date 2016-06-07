@@ -1,7 +1,10 @@
 /* TODO: Add a rule for images, so they never exceed their container's width. */
 
-
+html {
+  background-color: #C1CAD6;
+}
 body {
+  margin: 5%;
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
@@ -31,11 +34,11 @@ address {
 
 a, a:link, a:active {
   text-decoration: none;
-  color: #777;
+  color: #FF1053;
 }
 
 a:hover, a:focus {
-  color: #29506D;
+  color: #FFFFFF;
 }
 
 a:visited {
