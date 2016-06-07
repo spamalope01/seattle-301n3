@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-    <!-- TODO: Add a meta tag to properly set the viewport and initial scale -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- DONE: Add a meta tag to properly set the viewport and initial scale -->
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -12,14 +13,17 @@
   </head>
   <body>
     <header class="site-header clearfix">
-      <section class="heading-group-h1">
-        <h1>
-          Kilovolt Blog!
-        </h1>
-        <h2>The shocking power of static pages</h2>
-      </section>
+      <div class="headTitleGroup">
+        <section class="heading-group-h1">
+          <h1>
+            Kilovolt Blog!
+          </h1>
+          <h2>The shocking power of static pages</h2>
+        </section>
+      </div>
       <nav class="main-nav">
-        <!-- TODO: Add a hamburger menu icon here. -->
+        <div class="burgerMenu icon-menu"></div>
+        <!-- DONE: Add a hamburger menu icon here. -->
         <ul>
           <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
           <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
@@ -44,6 +48,7 @@
             </li>
           </ul>
         </div>
+
         <article class="template template" data-category="cat">
           <header>
             <h1>Title</h1>
@@ -56,6 +61,7 @@
           <a href="#" class="read-on">Read on &rarr;</a>
         </article>
       </section>
+
       <section id="about" class="tab-content">
         <header>
           Welcome to my Blog

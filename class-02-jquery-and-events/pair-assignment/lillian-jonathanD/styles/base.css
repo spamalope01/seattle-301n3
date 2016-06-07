@@ -24,13 +24,20 @@ address {
 
 /*LINK STYLES
 =======================================*/
-
-a, a:link, a:active {
-  color: #777;
-}
-
-a:hover, a:focus {
+a, a:link {
+  color: #3F6369;
+  text-decoration: none;
 }
 
 a:visited {
+  color: #A66832;
+}
+
+a:hover, a:focus {
+  color: #76CCC5;
+}
+
+a:active {
+  color: #3F6369;
+  text-decoration: none;
 }
