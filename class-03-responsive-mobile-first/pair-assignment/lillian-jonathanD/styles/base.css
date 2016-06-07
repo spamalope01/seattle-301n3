@@ -1,5 +1,6 @@
 /* TODO: Add a rule for images, so they never exceed their container's width. */
 
+
 html {
   background-color: #C1CAD6;
 }
@@ -39,6 +40,10 @@ a, a:link, a:active {
 
 a:hover, a:focus {
   color: #FFFFFF;
+}
+
+a:hover, a:focus {
+  color: #29506D;
 }
 
 a:visited {
