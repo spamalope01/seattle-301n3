@@ -1,5 +1,6 @@
 .site-header {
-  background: #FFEAAA;
+  background: #C1CAD6;
+  color: #6C6EA0;
 }
 
 /* DONE: Float the main header to the left, to make room for the hamburger menu. */
@@ -8,9 +9,10 @@
   padding: 0 0 .2em 1em;
 }
 
-/* TODO: Add styles for the icon-menu class. It should be bigger, and off to the right. */
+/* DONE: Add styles for the icon-menu class. It should be bigger, and off to the right. */
 .icon-menu {
-
+  display: inline-block;
+  font-size: 3em;
 }
 
 .main-nav {
@@ -52,6 +54,51 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+img {
+  margin: 30px;
+  max-width: 600px;
+  border: 2px solid #FFFFFF;
+  max-width: 200px;
+}
+
+@media only screen and (min-width: 960px) {
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: block;
+    text-align: center;
+}
+
+.main-nav li {
+  display: inline;
+}
+
+.main-nav li a {
+  display: inline;
+  padding: 1.500em;
+}
+
+.headTitleGroup {
+  justify-content: center;
+  display: flex;
+}
+
+
+.site-header {
+  max-width: 100%;
+}
+
+.heading-group-h1 {
+  text-align: center;
+}
+
+
+}
+
+
 
 /* TODO: Now add styles for how things should look on a larger screen:
          - Hide the hamburger.
