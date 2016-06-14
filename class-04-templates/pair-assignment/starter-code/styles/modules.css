@@ -1,20 +1,21 @@
 .site-header {
-  background: #FFEAAA;
+  color: #3C4A59;
+  margin: 0;
 }
 
-.heading-group-h1 {
-  float: left;
-  padding: 0 0 .2em 1em;
+.site-header a {
+  color: #3C4A59;
+  text-decoration: none;
 }
 
 .icon-menu {
-  font-size: 3em;
+  font-size: 2em;
   float: right;
 }
 
-.main-nav {
-  padding: 0.1em;
-}
+/*.main-nav {
+  padding: 0;
+}*/
 
 .main-nav ul {
   display: none;
@@ -28,10 +29,9 @@
 }
 
 .main-nav li {
-  margin-right: .4em;
+  margin-left: 1em;
   font-size: 1.5em;
-  padding: .5em .2em;
-  border-bottom: 1px solid #ccc;
+  padding: 0;
 }
 
 #filters {
@@ -58,11 +58,12 @@
   }
 
   .main-nav {
-    padding: .2em .2em .2em 2em;
+    padding: 0;
   }
 
   .main-nav ul {
     display: block;
+    padding: 0;
   }
 
   .main-nav ul li {
@@ -74,4 +75,8 @@
     color: #29506D;
   }
 
+}
+
+select {
+  background-color: transparent;
 }

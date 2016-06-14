@@ -10,46 +10,39 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
-
     <script id="blogArticles" type="text/x-handlebars-template">
-      {{#each articles}}
-      <section class="">{{title}}</section>
-      <section class="">{{category}}</section>
-      <section class="">{{{authorUrl}}}</section>
-      <section class="">{{publishedOn}}</section>
-      <section class="">{{{body}}}</section>
-      <section class="">{{pubDifference}}</section>
-      <hr />
-      {{/each}}
+      <article data-author="{{author}}" data-category="{{category}}">
+        <section class="title"><h1>{{title}}</h1></section>
+        <section class="category"><p>Category: {{category}}</p></section>
+        <section class="authorUrl"><p>By: {{{authorUrl}}}</p></section>
+        <section class="publishedOn"><p>{{publishedOn}}</p></section>
+        <section class="body"><p>{{{body}}}</p></section>
+        <section class="pubDifference"><p><i>{{pubDifference}}</i></p></section>
+        <hr />
+      </article>
     </script>
-
-    <!--
-      DONE: Add a script tag to hold the Handlebars template.
-        - Be sure to give it a meaningful id attribute.
-        - Move your old template structure to here.
-        - Insert placeholder keys.
-        - If your object doesn't have values you need yet, you can add those properties in the model.
-    -->
-
   </head>
+
   <body>
-    <header class="site-header clearfix">
-      <section class="heading-group-h1">
-        <h1>
-          Kilovolt Blog!
-        </h1>
-        <h2>The shocking power of static pages</h2>
-      </section>
+    <header>
+      <div class="site-header">
+        <section>
+          <h1>Kilovolt Blog!</h1>
+          <h2>The shocking power of static pages...</h2>
+        </section>
+
       <nav class="main-nav">
         <div class="icon-menu"></div>
-        <ul>
-          <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-          <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
-          <li><a href="http://github.com/brookr" target="_blank" class="icon-github"> GitHub</a></li>
-        </ul>
+          <ul>
+            <li class="tab" data-content="articles"><a href="#" class="icon-home">Home</a></li>
+            <li class="tab" data-content="about"><a href="#" class="icon-address-book">About</a></li>
+            <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3">Twitter</a></li>
+            <li><a href="http://github.com/brookr" target="_blank" class="icon-github">GitHub</a></li>
+          </ul>
       </nav>
-    </header>
+      
+    </div>
+</header>
     <main>
       <section id="articles" class="tab-content">
         <div>
@@ -67,12 +60,13 @@
           </ul>
         </div>
       </section>
+
       <section id="about" class="tab-content">
         <header>
           Welcome to my Blog
         </header>
         <section>
-          <h1>Some of my intrests:</h1>
+          <h1>Some of my interests:</h1>
           <ul>
             <li>Coding</li>
             <li>Sharing what I've learned</li>
@@ -82,12 +76,11 @@
       </section>
     </main>
     <footer>
-      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+      &copy; 2016 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <!-- DONE: Include Handlebars.JS from a CDN -->
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>

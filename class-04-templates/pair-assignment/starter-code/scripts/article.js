@@ -1,13 +1,12 @@
-// var articles = [];
-//
-// function Article (opts) {
-//   this.author = opts.author;
-//   this.authorUrl = opts.authorUrl;
-//   this.title = opts.title;
-//   this.category = opts.category;
-//   this.body = opts.body;
-//   this.publishedOn = opts.publishedOn;
-// }
+
+function Article (opts) {
+  this.author = opts.author;
+  this.authorUrl = opts.authorUrl;
+  this.title = opts.title;
+  this.category = opts.category;
+  this.body = opts.body;
+  this.publishedOn = opts.publishedOn;
+}
 
 Handlebars.registerHelper('pubDifference', function(){
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
@@ -15,17 +14,16 @@ Handlebars.registerHelper('pubDifference', function(){
   return this.publishStatus;
 })
 
+// DONE: Use handlebars to render your articles.
+//       - Get your template from the DOM.
+//       - Now "compile" your template with Handlebars.
 
-// Article.prototype.toHtml = function() {
-  // DONE: Use handlebars to render your articles.
-  //       - Get your template from the DOM.
-  //       - Now "compile" your template with Handlebars.
-  $(function () {
-    var $templateScript = $('#blogArticles').html();
-    var theTemplate = Handlebars.compile($templateScript);
-    var compiledHtml = theTemplate(rawData);
-    $('#articles').append(compiledHtml);
-  });
+Article.prototype.toHtml = function() {
+  var $templateScript = $('#blogArticles').html();
+  var theTemplate = Handlebars.compile($templateScript);
+  var compiledHtml = theTemplate(this);
+  $('#articles').append(compiledHtml);
+};
 
   // DONE: If your template will use properties that aren't on the object yet, add them.
   //   Since your template can't hold any JS logic, we need to execute the logic here.
@@ -35,14 +33,20 @@ Handlebars.registerHelper('pubDifference', function(){
   // DONE: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
 // };
 //
-rawData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+
+$(document).ready(function() {
+  var articles = [];
+
+  rawData.articles.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+
+  rawData.articles.forEach(function(ele) {
+    articles.push(new Article(ele));
+  })
+
+  articles.forEach(function(a){
+    $('#articles').append(a.toHtml())
+  });
+
 });
-//
-// rawData.forEach(function(ele) {
-//   articles.push(new Article(ele));
-// })
-//
-// articles.forEach(function(a){
-//   $('#articles').append(a.toHtml())
-// });

@@ -4,7 +4,7 @@ var articleView = {};
 articleView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
-      var val = $(this).find('address a').text();
+      var val = $(this).attr('data-author');
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#author-filter').append(optionTag);
 
@@ -68,4 +68,4 @@ $(document).ready(function() {
   articleView.handleAuthorFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
-})
+});
